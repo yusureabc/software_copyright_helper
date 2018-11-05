@@ -30,13 +30,11 @@ for fpathe,dirs,fs in os.walk( directory ):
     file_suffix = res[1]
     file_suffix = file_suffix.replace( '.', '' )
     if file_suffix in suffix_set:
-        # TODO 
         try:
             f = open( full_file_path, 'r' )
             file_content = f.read()
             print( file_content )
-            # exit()
-            # Font size
+
             run = paragraph.add_run( file_content )
             run.font.size = Pt( 12 )
             # Set font
