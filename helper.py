@@ -35,7 +35,7 @@ for fpathe,dirs,fs in os.walk( directory ):
             file_content = f.read()
             print( file_content )
 
-            run = paragraph.add_run( file_content )
+            run = paragraph.add_run( file_content + '\n\n' )
             run.font.size = Pt( 12 )
             # Set font
             run.font.name = 'Consolas'
